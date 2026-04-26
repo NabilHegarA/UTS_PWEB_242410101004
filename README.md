@@ -1,58 +1,46 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Website HookPoint – Club Pemancingan adalah sebuah aplikasi web sederhana yang dibuat untuk mengelola dan menampilkan informasi tempat pemancingan (lapak). Website ini juga memiliki sistem login sederhana untuk mengakses halaman dashboard dan profil pengguna. Website ini dibuat menggunakan Laravel (PHP Framework), PHP, HTML, CSS, Blade Template Engine, Konsep MVC (Model, View, Controller), dan Session (untuk menyimpan data login pengguna).
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Fitur dari website HookPoint – Club Pemancingan, yaitu:
 
-## About Laravel
+1. Beranda (Landing Page)
+<img width="1877" height="873" alt="Screenshot 2026-04-26 121617" src="https://github.com/user-attachments/assets/901d53c2-3b95-43b4-b1b8-baaaf35afb92" />
+<img width="1879" height="875" alt="Screenshot 2026-04-26 121648" src="https://github.com/user-attachments/assets/73e09f50-5950-4349-9ca3-5928d499a18b" />
+<img width="1870" height="876" alt="Screenshot 2026-04-26 121636" src="https://github.com/user-attachments/assets/1c72fcdd-aecf-4d48-9ed0-dac13d241d40" />
+Berisi navbar untuk akses menuju lapak yang tersedia, login dan register sebagai fitur autentikasi untuk membuat reservasi atau melakukan transaksi. Kemudian terdapat nama aplikasi dan ringkasan seperti slogan serta informasi buka – tutup pemancingan. Lalu di bawahnya terdapat card lapak terpopuler, dan ada pula tabel ringkasan total dari lapak yang ada, serta terdapat footer di bawahnya.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+2. Lapak pada Landing Page
+<img width="1873" height="875" alt="Screenshot 2026-04-26 121702" src="https://github.com/user-attachments/assets/98e1f406-737f-41ba-b0cd-2caad224ec6c" />
+<img width="1878" height="875" alt="Screenshot 2026-04-26 121714" src="https://github.com/user-attachments/assets/4fe38401-68f4-4fb4-9134-9b91bd6bc668" />
+berisi card lapak yang tersedia di dalam website dimana pengunjung dapat melakukan searching berdasarkan nama lapak dan jenis kolam, serta melakukan filter berdasakan jenis kolam dan status ketersediaannya
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+3. Login
+<img width="1886" height="881" alt="Screenshot 2026-04-26 121728" src="https://github.com/user-attachments/assets/fb719c49-8579-4246-919e-9e0028054652" />
+<img width="1871" height="871" alt="Screenshot 2026-04-26 121738" src="https://github.com/user-attachments/assets/c07e1f25-bcb2-4fa2-961b-26ec8f4b9b4c" />
+berisi halaman login yang dapat di akses sesuai dengan akun yang tersimpan di dalam PageController.php yakni, terdapat akun admin dengan username "admin" dan password "admin123", serta akun user dengan username "user" dan password "user123". Keduanya akan di arahkan ke halaman dashboard, profile, dan pengelolaan yang sama, tetapi data yang dikirim tetap sesuai dengan data yang dipakai saat login.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+4. Register
+<img width="1881" height="877" alt="Screenshot 2026-04-26 121748" src="https://github.com/user-attachments/assets/acbdd625-01da-4699-b576-cd48323deb59" />
+<img width="1876" height="880" alt="Screenshot 2026-04-26 121759" src="https://github.com/user-attachments/assets/94df8a42-3cec-4efe-b763-eb67d842fdfd" />
+berisi halaman register dimana pengunjung nanti harus menginputkan username, nama lengkap, no telepon, dan password. tetapi akun yang dibuat pada halaman register ini tidak dapat digunakan pada halaman login, karena login hanya menerima 2 akun yang sudah ada pada PageController. Tetapi halamn Register ini bisa diarahkan pada halaman dashboard saja.
 
-## Learning Laravel
+5. Dashboard Admin
+<img width="1902" height="882" alt="Screenshot 2026-04-26 121821" src="https://github.com/user-attachments/assets/184197c7-5d31-4238-96aa-c57fb235561a" />
+<img width="1906" height="878" alt="Screenshot 2026-04-26 121832" src="https://github.com/user-attachments/assets/1e877560-5a85-41e8-8ac1-a20c10c97680" />
+Berisi navbar yang memunculkan logo nama website, dan terdapat request handling pada sebelah kanan navbar, serta sidebar yang berisi fitur admin dan tombol logout. Kemudian terdapat card yang nantinya dapat mengetahui total pendapatan, total transaksi, dan total lapak aktif.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+6. Profile Admin
+<img width="1901" height="876" alt="Screenshot 2026-04-26 121846" src="https://github.com/user-attachments/assets/34c5bbe4-5783-4db7-a269-6a85dc2cee96" />
+<img width="1900" height="874" alt="Screenshot 2026-04-26 121902" src="https://github.com/user-attachments/assets/e9dfd3e5-b43b-4820-9f84-f6001ca93de4" />
+Berisi informasi profil admin ataupun user sesuai dengan akun yang terdapat pada PageController.php dan akun yang digunakan saat login. Kemudian terdapat pula tombol edit profil untuk mengubah profil yang sedang ditampilkan (belum berfungsi).
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+7. Pengelolaan
+<img width="1914" height="879" alt="Screenshot 2026-04-26 121932" src="https://github.com/user-attachments/assets/e0f65af0-1f95-468c-9abd-3e474f76b655" />
+<img width="1902" height="882" alt="Screenshot 2026-04-26 121921" src="https://github.com/user-attachments/assets/768ef5e8-b27e-4dc5-bb24-dc28a46f7cdf" />
+Hampir sama dengan halaman lapak pada admin, berisi card lapak yang tersedia dan terdapat akses searching dan fiter untuk memudahkan pencarian lapak, dan terdapat tombol edit dan hapus yang dapat mengubah dan menghapus card lapak.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+8. Logout
+<img width="1908" height="868" alt="Screenshot 2026-04-26 121948" src="https://github.com/user-attachments/assets/39ec65db-ea40-49a4-a2e2-01de1f2a0d35" />
+Tombol logout untuk mengakhiri session login yang sedang terjadi.
 
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
-
-```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
-```
-
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Berikut merupakan link video penjelasan dari projek UTS PWEB ini:
+https://youtu.be/3QpkLp6yFKw
